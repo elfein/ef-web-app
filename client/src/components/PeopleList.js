@@ -1,28 +1,13 @@
 import React, { Component } from 'react'
 import { Card } from 'semantic-ui-react'
-import axios from 'axios'
 import PersonCard from './PersonCard';
 
 export default class PeopleList extends Component {
-state = {
-    apiPeople: []
-}
-
-
-    getPeopleData = async () => {
-        const response = await axios.get('/api/people')
-        this.setState({ apiPeople: response.data.data })
-    }
-
-    componentDidMount = () => {
-        this.getPeopleData()
-    }
-
     render() {
 
         let peopleList = []
-        if (this.state.apiPeople[0]) {
-            peopleList = this.state.apiPeople.map((person, i) => {
+        if (this.props.apiPeople[0]) {
+            peopleList = this.props.apiPeople.map((person, i) => {
                 return <PersonCard
                     key={i}
                     index={i}
