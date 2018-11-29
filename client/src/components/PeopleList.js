@@ -25,6 +25,7 @@ state = {
             peopleList = this.state.apiPeople.map((person, i) => {
                 return <PersonCard
                     key={i}
+                    index={i}
                     name={person.display_name}
                     email={person.email_address}
                     jobTitle={person.title}
