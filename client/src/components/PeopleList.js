@@ -33,7 +33,7 @@ state = {
         }
 
         return (
-            <Card.Group>
+            <Card.Group centered>
                 {peopleList}
             </Card.Group>
         )
