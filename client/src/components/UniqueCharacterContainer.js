@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UniqueCharacterTable from './UniqueCharacterTable';
 import { Button } from 'semantic-ui-react'
 
 export default class UniqueCharacters extends Component {
@@ -24,7 +25,8 @@ export default class UniqueCharacters extends Component {
                         "Calculate Unique Characters"}
                 </Button>
                 {this.state.showList ?
-                    "list"
+                    <UniqueCharacterTable
+                        apiPeople={this.props.apiPeople} />
                     :
                     null}
             </div>

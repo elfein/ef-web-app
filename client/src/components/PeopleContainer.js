@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import PeopleList from './PeopleList';
-import UniqueCharacters from './UniqueCharacters';
+import UniqueCharacterContainer from './UniqueCharacterContainer';
 
 export default class PeopleContainer extends Component {
     state = {
@@ -22,7 +22,7 @@ export default class PeopleContainer extends Component {
         return (
             <div>
                 <h2>Information</h2>
-                <UniqueCharacters
+                <UniqueCharacterContainer
                     apiPeople={this.state.apiPeople} />
                 <h2>All People</h2>
                 <PeopleList
