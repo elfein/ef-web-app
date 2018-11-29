@@ -8,7 +8,7 @@ class Api::PeopleController < ApplicationController
             'Accept' => 'application/json'
         }
 
-        url = "https://api.salesloft.com/v2/people.json"
+        url = "https://api.salesloft.com/v2/people.json?per_page=60"
         @people = HTTParty.get(url, :headers => headers)
         render json: @people
     end

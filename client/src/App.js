@@ -5,7 +5,7 @@ import PeopleContainer from './components/PeopleContainer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <Header title={"Simple Web App"} />
         <PeopleContainer />
       </div>
