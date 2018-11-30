@@ -20,7 +20,8 @@ To run this app locally:
 5. Run `rails db:create`
 6. `cd` into the client directory
 7. Run `npm i`
-8. Start the app with `foreman start -f Procfile.dev`!
+8. `cd ..` to return to the root directory
+9. Start the app with `foreman start -f Procfile.dev`!
 
 ## 2. Linked to Deployed App
 
