@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
-import PeopleContainer from './components/PeopleContainer';
-import { Container, Divider } from 'semantic-ui-react';
+import PeopleContainer from './components/PeopleContainer'
+import { Container, Divider } from 'semantic-ui-react'
 
 class App extends Component {
   render() {
@@ -12,8 +12,8 @@ class App extends Component {
         <Divider />
         <PeopleContainer />
       </Container>
-    );
+    )
   }
 }
 
-export default App;
+export default App

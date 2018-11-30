@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Table } from 'semantic-ui-react';
-import CharacterRow from './CharacterRow';
+import { Table } from 'semantic-ui-react'
+import CharacterRow from './CharacterRow'
 
 export default class UniqueCharacterList extends Component {
   render() {

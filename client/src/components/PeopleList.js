@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Card } from 'semantic-ui-react'
-import PersonCard from './PersonCard';
+import PersonCard from './PersonCard'
 
 export default class PeopleList extends Component {
     render() {

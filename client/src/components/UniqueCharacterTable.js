@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Table, Divider } from 'semantic-ui-react'
-import UniqueCharacterList from './UniqueCharacterList';
+import UniqueCharacterList from './UniqueCharacterList'
 
 export default class UniqueCharacterTable extends Component {
     render() {

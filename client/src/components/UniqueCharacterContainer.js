@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import UniqueCharacterTable from './UniqueCharacterTable';
+import UniqueCharacterTable from './UniqueCharacterTable'
 import { Button } from 'semantic-ui-react'
 
 export default class UniqueCharacterContainer extends Component {

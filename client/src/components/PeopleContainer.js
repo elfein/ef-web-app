@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import PeopleList from './PeopleList';
-import UniqueCharacterContainer from './UniqueCharacterContainer';
+import PeopleList from './PeopleList'
+import UniqueCharacterContainer from './UniqueCharacterContainer'
 
 export default class PeopleContainer extends Component {
     state = {
