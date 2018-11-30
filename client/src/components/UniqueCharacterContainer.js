@@ -5,16 +5,15 @@ import { Button } from 'semantic-ui-react'
 export default class UniqueCharacterContainer extends Component {
     state = {
         showList: false,
-        characterArrays: []
-    }
-
-    handleClick = () => {
-        this.toggleList()
-        this.calculateCount()
+        characterArrays: ["a"]
     }
 
     toggleList = () => {
         this.setState({ showList: !this.state.showList })
+    }
+
+    componentDidMount = () => {
+        this.calculateCount()
     }
 
     calculateCount = () => {
@@ -24,11 +23,11 @@ export default class UniqueCharacterContainer extends Component {
     render() {
         return (
             <div>
-                <Button size='big' onClick={this.handleClick}>
+                <Button size='big' onClick={this.toggleList}>
                     {this.state.showList ?
                         "Hide Unique Characters"
                         :
-                        "Calculate Unique Characters"}
+                        "Show Unique Characters"}
                 </Button>
                 {this.state.showList ?
                     <UniqueCharacterTable
