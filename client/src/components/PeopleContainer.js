@@ -5,25 +5,132 @@ import UniqueCharacterContainer from './UniqueCharacterContainer';
 
 export default class PeopleContainer extends Component {
     state = {
-        apiPeople: []
+        apiPeople: [],
+        characterArrays: []
     }
-
 
     getPeopleData = async () => {
         const response = await axios.get('/api/people')
         this.setState({ apiPeople: response.data.data })
     }
 
-    componentDidMount = () => {
-        this.getPeopleData()
+    componentDidMount = async () => {
+        await this.getPeopleData()
+        this.calculateCount()
     }
+
+    calculateCount = () => {
+        let charArrays = []
+        for (let n = 0; n < 28; n++) {
+            charArrays.push([])
+        }
+        console.log(charArrays)
+        for (let i = 0; i < 1; i++) {
+            let email = "qwertyuiopasdfghjklzxcvbnm@emmy.com"
+            for (let j = 0; j < email.length; j++) {
+                let letter = email[j].toLowerCase()
+                switch (letter) {
+                    case 'a':
+                        charArrays[0].push(letter)
+                        break
+                    case 'b':
+                        charArrays[1].push(letter)
+                        break
+                    case 'c':
+                        charArrays[2].push(letter)
+                        break
+                    case 'd':
+                        charArrays[3].push(letter)
+                        break
+                    case 'e':
+                        charArrays[4].push(letter)
+                        break
+                    case 'f':
+                        charArrays[5].push(letter)
+                        break
+                    case 'g':
+                        charArrays[6].push(letter)
+                        break
+                    case 'h':
+                        charArrays[7].push(letter)
+                        break
+                    case 'i':
+                        charArrays[8].push(letter)
+                        break
+                    case 'j':
+                        charArrays[9].push(letter)
+                        break
+                    case 'k':
+                        charArrays[10].push(letter)
+                        break
+                    case 'l':
+                        charArrays[11].push(letter)
+                        break
+                    case 'm':
+                        charArrays[12].push(letter)
+                        break
+                    case 'n':
+                        charArrays[13].push(letter)
+                        break
+                    case 'o':
+                        charArrays[14].push(letter)
+                        break
+                    case 'p':
+                        charArrays[15].push(letter)
+                        break
+                    case 'q':
+                        charArrays[16].push(letter)
+                        break
+                    case 'r':
+                        charArrays[17].push(letter)
+                        break
+                    case 's':
+                        charArrays[18].push(letter)
+                        break
+                    case 't':
+                        charArrays[19].push(letter)
+                        break
+                    case 'u':
+                        charArrays[20].push(letter)
+                        break
+                    case 'v':
+                        charArrays[21].push(letter)
+                        break
+                    case 'w':
+                        charArrays[22].push(letter)
+                        break
+                    case 'x':
+                        charArrays[23].push(letter)
+                        break
+                    case 'y':
+                        charArrays[24].push(letter)
+                        break
+                    case 'z':
+                        charArrays[25].push(letter)
+                        break
+                    case '@':
+                        charArrays[26].push(letter)
+                        break
+                    case '.':
+                        charArrays[27].push(letter)
+                        break
+                    default:
+                        charArrays[28].push(letter)
+                }
+            }
+            console.log(charArrays)
+        }
+        this.setState({ characterArrays: charArrays })
+    }
+
+
 
     render() {
         return (
             <div>
                 <h2>Information</h2>
                 <UniqueCharacterContainer
-                    apiPeople={this.state.apiPeople} />
+                    characterArrays={this.state.characterArrays} />
                 <h2>All People</h2>
                 <PeopleList
                     apiPeople={this.state.apiPeople} />
