@@ -17,9 +17,10 @@ To run this app locally:
 2. Run `bundle`
 3. Run `bundle exec figaro install`
 4. Add your api key configuration to the generated `config/application.yml` file; make sure to follow the same naming convention used in Api::PeopleController
-5. `cd` into the client directory
-6. Run `npm i`
-7. Start the app with `foreman start -f Procfile.dev`!
+5. Run `rails db:create`
+6. `cd` into the client directory
+7. Run `npm i`
+8. Start the app with `foreman start -f Procfile.dev`!
 
 ## 2. Linked to Deployed App
 
