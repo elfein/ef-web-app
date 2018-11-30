@@ -12,6 +12,7 @@ export default class PeopleContainer extends Component {
     getPeopleData = async () => {
         const response = await axios.get('/api/people')
         let allPeople = []
+        // The following for loops are related to the paginated format of the API data
         for (let i = 0; i < response.data.length; i++) {
             for (let j = 0; j < response.data[i].data.length; j++) {
                 allPeople.push(response.data[i].data[j])
@@ -26,6 +27,8 @@ export default class PeopleContainer extends Component {
         this.sortByFrequency()
     }
 
+    // The 2 following functions handle calculating and sorting 
+    // the unique characters from email addresses
     calculateCount = () => {
         let charArrays = []
         for (let n = 0; n < 29; n++) {
@@ -143,7 +146,7 @@ export default class PeopleContainer extends Component {
     render() {
         return (
             <div>
-                <h2>Information</h2>
+                <h2>People Information</h2>
                 <UniqueCharacterContainer
                     characterArrays={this.state.characterArrays} />
                 <h2>All People</h2>
