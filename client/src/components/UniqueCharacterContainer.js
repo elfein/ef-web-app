@@ -2,17 +2,23 @@ import React, { Component } from 'react'
 import UniqueCharacterTable from './UniqueCharacterTable';
 import { Button } from 'semantic-ui-react'
 
-export default class UniqueCharacters extends Component {
+export default class UniqueCharacterContainer extends Component {
     state = {
-        showList: false
+        showList: false,
+        characterArrays: []
     }
 
     handleClick = () => {
         this.toggleList()
+        this.calculateCount()
     }
 
     toggleList = () => {
         this.setState({ showList: !this.state.showList })
+    }
+
+    calculateCount = () => {
+        console.log("hello")
     }
 
     render() {
@@ -26,7 +32,8 @@ export default class UniqueCharacters extends Component {
                 </Button>
                 {this.state.showList ?
                     <UniqueCharacterTable
-                        apiPeople={this.props.apiPeople} />
+                        characterArrays={this.state.characterArrays}
+                    />
                     :
                     null}
             </div>

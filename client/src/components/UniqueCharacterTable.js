@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
-import {Table} from 'semantic-ui-react'
+import { Container, Table } from 'semantic-ui-react'
+import UniqueCharacterList from './UniqueCharacterList';
 
-export default class UniqueCharacterList extends Component {
+export default class UniqueCharacterTable extends Component {
     render() {
         return (
-            <Table celled selectable>
-                
-            </Table>
+            <Container>
+                <Table celled selectable>
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell>Character</Table.HeaderCell>
+                            <Table.HeaderCell>Count</Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Header>
+                    <UniqueCharacterList
+                    characterArrays={this.props.characterArrays} />
+                </Table>
+            </Container>
         )
     }
 }
