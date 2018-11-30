@@ -8,10 +8,10 @@ export default class UniqueCharacterList extends Component {
     let uniqueCharacterList = []
     if (this.props.characterArrays[0]) {
       uniqueCharacterList = this.props.characterArrays.map((characterArray, i) => {
-        return <CharacterRow 
-        key={i}
-        char={characterArray[0]}
-        length={characterArray.length}
+        return <CharacterRow
+          key={i}
+          char={characterArray[0]}
+          length={characterArray.length}
         />
       })
     }

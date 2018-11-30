@@ -14,7 +14,7 @@ export default class PeopleList extends Component {
                     name={person.display_name}
                     email={person.email_address}
                     jobTitle={person.title}
-                    />
+                />
             })
         }
 

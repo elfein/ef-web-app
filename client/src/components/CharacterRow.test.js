@@ -8,7 +8,7 @@ describe('CharacterRow component', () => {
     beforeEach(() => {
         component = shallow(<CharacterRow char={"Z"} length={10} />)
     })
-    
+
     it('should render correct character', () => {
         expect(component.contains('Z')).toBeTruthy()
     })
