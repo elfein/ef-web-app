@@ -21,12 +21,12 @@ export default class PeopleContainer extends Component {
 
     calculateCount = () => {
         let charArrays = []
-        for (let n = 0; n < 28; n++) {
+        for (let n = 0; n < 29; n++) {
             charArrays.push([])
         }
-        console.log(charArrays)
-        for (let i = 0; i < 1; i++) {
-            let email = "qwertyuiopasdfghjklzxcvbnm@emmy.com"
+        const people = [...this.state.apiPeople]
+        for (let i = 0; i < people.length; i++) {
+            let email = people[i].email_address
             for (let j = 0; j < email.length; j++) {
                 let letter = email[j].toLowerCase()
                 switch (letter) {
@@ -114,11 +114,13 @@ export default class PeopleContainer extends Component {
                     case '.':
                         charArrays[27].push(letter)
                         break
-                    default:
+                    case '_':
                         charArrays[28].push(letter)
+                        break
+                    default:
+                        charArrays[29].push(letter)
                 }
             }
-            console.log(charArrays)
         }
         this.setState({ characterArrays: charArrays })
     }
