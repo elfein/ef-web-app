@@ -16,7 +16,8 @@ export default class PeopleContainer extends Component {
 
     componentDidMount = async () => {
         await this.getPeopleData()
-        this.calculateCount()
+        await this.calculateCount()
+        this.sortByFrequency()
     }
 
     calculateCount = () => {
@@ -125,7 +126,13 @@ export default class PeopleContainer extends Component {
         this.setState({ characterArrays: charArrays })
     }
 
-
+    sortByFrequency = () => {
+        let characterArrays = [...this.state.characterArrays]
+        characterArrays.sort((a, b) => {
+            return b.length - a.length
+        })
+        this.setState({ characterArrays })
+    }
 
     render() {
         return (
