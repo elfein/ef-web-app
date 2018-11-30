@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Container, Table } from 'semantic-ui-react'
+import UniqueCharacterList from './UniqueCharacterList';
 
-export default class UniqueCharacterList extends Component {
+export default class UniqueCharacterTable extends Component {
     render() {
         return (
             <Container>
@@ -13,8 +14,7 @@ export default class UniqueCharacterList extends Component {
                         </Table.Row>
                     </Table.Header>
                     <UniqueCharacterList
-                        apiPeople={this.props.apiPeople}
-                    />
+                    characterArrays={this.props.characterArrays} />
                 </Table>
             </Container>
         )
