@@ -11,7 +11,13 @@ export default class PeopleContainer extends Component {
 
     getPeopleData = async () => {
         const response = await axios.get('/api/people')
-        this.setState({ apiPeople: response.data.data })
+        let allPeople = []
+        for (let i = 0; i < response.data.length; i++) {
+            for (let j = 0; j < response.data[i].data.length; j++) {
+                allPeople.push(response.data[i].data[j])
+            }
+        }
+        this.setState({ apiPeople: allPeople })
     }
 
     componentDidMount = async () => {
