@@ -51,7 +51,7 @@ To run this app locally:
 * [Semantic UI React](https://react.semantic-ui.com/)'s documentation was very clear and easy to use.
 * [Figaro](https://github.com/laserlemon/figaro)'s documentation also lent itself to easy implementation and deployment.
 
-## Development Considerations
+## 6. Development Considerations
 
 #### Struggles
 
