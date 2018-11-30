@@ -66,4 +66,4 @@ To run this app locally:
 
 * __I am also glad to have deepened my understanding of tests slightly;__ I was able to write a case that tested for correct sorting in my PeopleContainer.test.js file, which felt relatively complex at the time, as well as a number of other tests.
 
-* __I managed to meet a personal goal of calling all 346 people entries from the API.__ After studying the documentation and relevant parameters, made the necessary adjustments to enable successive calls to the API and parse the returned arrays of data.
+* __I met a personal goal of calling all 346 people entries from the API.__ After studying the documentation and relevant parameters, I made the necessary adjustments to enable successive calls to the API and parse the returned arrays of data.
